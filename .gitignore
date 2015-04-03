@@ -55,3 +55,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# environment selection file
+environment.py
+
+# project django settings
+oneup/settings/
