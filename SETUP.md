@@ -106,9 +106,9 @@ Paste the following into `environment.py`:
 
 Then create a settings file for `development`:
 
-	$ mkdir /oneup/settings
-	$ cp /oneup/settings.py /oneup/settings/development.py
-	$ nano /oneup/settings/development.py
+	$ mkdir oneup/settings
+	$ cp oneup/settings.py oneup/settings/development.py
+	$ nano oneup/settings/development.py
 
 Remember to edit the `SECRET_KEY` and change the `DATABASES` settings in `development.py`:
 
