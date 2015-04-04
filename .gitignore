@@ -63,3 +63,8 @@ environment.py
 oneup/settings/development.py
 oneup/settings/testing.py
 oneup/settings/production.py
+
+# virtual environment files
+bin/
+include/
+local/

@@ -5,6 +5,7 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'oneup.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
+    url (r'^$', 'oneup.views.index.page'),
+	url (r'^index$', 'oneup.views.index.page'),
+    url (r'^admin/', include(admin.site.urls)),
 ]
