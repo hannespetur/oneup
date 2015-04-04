@@ -97,7 +97,6 @@ Now let's clone the current version of our project from github:
 
 Now let's set our `environment` to `development`:
 
-	$ touch environment.py
 	$ nano environment.py
 
 Paste the following into `environment.py`:
@@ -109,7 +108,7 @@ Then create a settings file for `development`:
 	$ cp oneup/settings/default.py oneup/settings/development.py
 	$ nano oneup/settings/development.py
 
-Remember to edit the `SECRET_KEY` and change the `DATABASES` settings in `development.py`:
+Remember to change the `SECRET_KEY` and the `DATABASES` settings in `development.py`:
 
 	DATABASES = {
 	    'default': {
