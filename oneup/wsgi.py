@@ -11,8 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-import bowerstatic
-
 # load environment settings
 try:
 	from settings.environment import environment
@@ -24,7 +22,4 @@ if environment in ['development','testing','production']:
 else:
 	os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oneup.settings.default')
 
-# bower settings
-bower = bowerstatic.Bower()
-
-application = bower.wrap(get_wsgi_application())
+application = get_wsgi_application()
