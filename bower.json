@@ -1,0 +1,8 @@
+{
+  "name": "oneup",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "qwest": "~1.5.11"
+  }
+}
