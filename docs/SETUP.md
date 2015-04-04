@@ -10,6 +10,13 @@ We're using `git` so make sure you have that installed:
 
 	$ sudo apt-get install git
 
+We're going to use the web package manager `bower`:
+
+	$ sudo apt-get install nodejs
+	$ sudo npm install -g bower
+
+For more information about `bower` check out [bower.io](http://bower.io/).
+
 # PostgreSQL
 
 To install PostgreSQL run the following command:
@@ -90,7 +97,6 @@ Our environment is now ready, let's install a few things on it:
 
 	$ pip install django
 	$ pip install psycopg2
-	$ pip install bowerstatic
 
 Now let's clone the current version of our project from github:
 
