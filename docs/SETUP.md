@@ -97,6 +97,7 @@ Our environment is now ready, let's install a few things on it:
 
 	$ pip install django
 	$ pip install psycopg2
+	$ pip install South
 
 Now let's clone the current version of our project from github:
 
