@@ -1,6 +1,6 @@
-# Update our system
+This setup recipe is thought for 'semi' production setup using Ubuntu 14.04 LTS. For development setup or people wanting to try this out on their PC note, big chunks of ingredients here are unneccesary so check out the (to be written) **QUICKSETUP.md** doc.
 
-This setup is thought for Ubuntu 14.04 LTS.
+# Update our system
 
 Let's get started by making sure our system is up to date.
 
