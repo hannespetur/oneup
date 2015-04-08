@@ -9,4 +9,5 @@ urlpatterns = [
 	url (r'^index$', 'oneup.apps.test.views.index.page'),
 	url (r'^about$', 'oneup.apps.test.views.about.page', name="public_about"),
     url (r'^admin/', include(admin.site.urls)),
+    url (r'^polls/', include('oneup.apps.test.views.polls.urls')),
 ]

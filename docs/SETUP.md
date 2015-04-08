@@ -97,7 +97,6 @@ Our environment is now ready, let's install a few things on it:
 
 	$ pip install django
 	$ pip install psycopg2
-	$ pip install South
 
 Now let's clone the current version of our project from github:
 
@@ -135,3 +134,21 @@ afterwards run:
 	$ python manage.py runserver localhost:8000
 
 [It works! Squee!](http://localhost:8000/) Of course, you haven't actually done any work yet.
+
+# Using the test app
+You can use the test app for anything... it's your area for testing out django! This section will have information about things to try out in the test app.
+
+## Test simple html
+At the top-level there is a very simple example of how we can use django to host two simple html files using templates. You can view the two pages with a server running at [http://localhost:8000/](http://localhost:8000/) and [http://localhost:8000/about](http://localhost:8000/about). Both of the files use the template at oneup/apps/test/templates/base.html.
+
+## Test simple poll server
+Following the tutorial at: [https://docs.djangoproject.com/en/1.8/intro/tutorial01/](https://docs.djangoproject.com/en/1.8/intro/tutorial01/) we can play around with a simple poll server. The server uses postgreSQL to store questions and answers and keeps track of how many users have voted each question.
+
+First you'll have to create a migration of the model and then apply it to the database. You do this using:
+
+	$ python manage.py makemigrations polls
+	$ python manage.py migrate
+
+If your database is properly set up you shouldn't get any errors. By visiting the [admin page](http://localhost:8000/admin/) you can add questions and answers (as well as change their results^^).
+
+The index page at [http://localhost:8000/polls/](http://localhost:8000/polls/) will up to 5 newest polls, the user can then view the polls in more detail at e.g. [http://localhost:8000/polls/1](http://localhost:8000/polls/1) to view poll 1. [http://localhost:8000/polls/1/results/](http://localhost:8000/polls/1/results/) will show the results for poll 1 and [http://localhost:8000/polls/1/vote/](http://localhost:8000/polls/1/vote/) is the vote page of poll 1.
