@@ -1,8 +1,9 @@
 {
-  "name": "oneup",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {
-    "qwest": "~1.5.11"
-  }
+    "name": "oneup",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "qwest": "~1.5.11",
+        "bootstrap": "3.3.4"
+    }
 }
