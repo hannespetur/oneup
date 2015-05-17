@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title_html %}
+  {{ bloc.super }}Home
+{% endblock %}
+{% block h1 %}
+  Hello World!
+{% endblock %}
+{% block article_content %}
+  We are {{team}}!
+  {% if years < 10 %}
+    You are a {{years}} year old child!
+  {% elif years < 18 %}
+    You are a {{years}} year old teenager!
+  {% else %}
+    You are an {{years}} year old adult!
+  {% endif %}
+  <br />
+  <span> Some games we play: </span>
+  <ul>
+    {% for game in games_array %}
+    <li>
+      {{ game }}
+    </li>
+    {% endfor %}
+  </ul>
+  <br />
+  <a href="{% url 'public_about' %}">About</a>
+{% endblock %}
