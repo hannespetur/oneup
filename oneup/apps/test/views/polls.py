@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.core.urlresolvers import reverse
 
-from ...models import Question, Choice
+from oneup.apps.test.models import Question, Choice
 
 
 def index(request):

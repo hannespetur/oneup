@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from . import polls
+from oneup.apps.test.views import polls
 
 urlpatterns = [
     # ex: /polls/
