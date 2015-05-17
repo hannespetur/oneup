@@ -73,3 +73,6 @@ oneup/static/components
 # database
 oneup/database.db
 oneup/apps/test/migrations/
+
+# PyCharm
+.idea/

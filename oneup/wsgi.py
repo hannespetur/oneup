@@ -13,13 +13,13 @@ from django.core.wsgi import get_wsgi_application
 
 # load environment settings
 try:
-	from settings.environment import environment
+    from settings.environment import environment
 except:
-	environment = ''
+    environment = ''
 
 if environment in ['development','testing','production']:
-	os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oneup.settings.%s' % environment)
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oneup.settings.%s' % environment)
 else:
-	os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oneup.settings.default')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oneup.settings.default')
 
 application = get_wsgi_application()
