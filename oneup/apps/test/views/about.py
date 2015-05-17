@@ -6,4 +6,10 @@ View for about page.
 
 
 def page(request):
-    return render(request, 'en/public/about.html', {"about": "active"})
+    return render(
+    	request,
+    	'en/public/about.html',
+    	{
+    		"about": "active"
+    	}
+    )
