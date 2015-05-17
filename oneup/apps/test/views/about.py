@@ -6,4 +6,4 @@ View for about page.
 
 
 def page(request):
-    return render(request, 'en/public/about.html')
+    return render(request, 'en/public/about.html', {"tab": "about"})

@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 {% block title_html %}
-  {{ bloc.super }}Running on Django!
+  {{ bloc.super }}Home
 {% endblock %}
 {% block h1 %}
   Hello World!
 {% endblock %}
 {% block article_content %}
-  <span style="color:blue"> We are {{team}}! </span>
-  <span style="color:red">
-    {% if years < 10 %}
-      You are a {{years}} year old child!
-    {% elif years < 18 %}
-      You are a {{years}} year old teenager!
-    {% else %}
-      You are an {{years}} year old adult!
-    {% endif %}
-  </span>
-  <br />
+  We are {{team}}!
+  {% if years < 10 %}
+    You are a {{years}} year old child!
+  {% elif years < 18 %}
+    You are a {{years}} year old teenager!
+  {% else %}
+    You are an {{years}} year old adult!
+  {% endif %}
   <br />
   <span> Some games we play: </span>
   <ul>
