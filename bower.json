@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "qwest": "~1.5.11"
+    "qwest": "~1.5.12",
+    "bootstrap": "3.3.4"
   }
 }
