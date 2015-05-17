@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'oneup.apps.test',
+    'oneup.apps.tutorial',
 )
 
 MIDDLEWARE_CLASSES = (
