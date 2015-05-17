@@ -39,9 +39,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="{{ index|default:"" }}"><a href="/">Home</a></li>
-            <li class="{{ about|default:"" }}"><a href="/about">About</a></li>
-            <li class="{{ polls|default:"" }}"><a href="/polls/">Polls</a></li>
+            <li class="{{ index|default:"" }}"><a href="{% url 'public_index' %}">Home</a></li>
+            <li class="{{ about|default:"" }}"><a href="{% url 'public_about' %}">About</a></li>
+            <li class="{{ polls|default:"" }}"><a href="{% url 'polls:index' %}">Polls</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
