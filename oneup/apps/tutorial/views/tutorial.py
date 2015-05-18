@@ -8,7 +8,7 @@ from oneup.apps.test.models import Question, Choice
 
 
 class IndexView(generic.ListView):
-    template_name = 'polls/index.html'
+    template_name = 'tutorial/index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
@@ -31,7 +31,7 @@ class DetailView(generic.DetailView):
 
 class ResultsView(generic.DetailView):
     model = Question
-    template_name = 'polls/results.html'
+    template_name = 'tutorial/results.html'
 
 
 def vote(request, question_id):
