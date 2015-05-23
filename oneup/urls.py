@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^polls/', include('oneup.apps.test.urls', namespace="polls")),
     url(r'^tutorial/', include('oneup.apps.tutorial.urls', namespace="tutorial")),
+    url(r'^journal/', include('oneup.apps.journal.urls', namespace="journal")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

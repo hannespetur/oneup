@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'oneup.apps.test',
     'oneup.apps.tutorial',
+    'oneup.apps.journal',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -99,6 +100,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+BASE_HREF = 'http://localhost:8000/'
 
 STATIC_URL = '/static/'
 
