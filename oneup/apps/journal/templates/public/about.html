@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title_html %}
+  {{ bloc.super }}About Team 1up
+{% endblock %}
+{% block h1 %}
+  About Team 1up
+{% endblock %}
+{% block article_content %}
+  Team members are: ...
+  <br /> <br />
+  <a href="{% url 'public_index' %}">Back to frontpage</a>
+{% endblock %}
