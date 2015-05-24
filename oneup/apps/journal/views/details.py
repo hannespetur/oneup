@@ -22,12 +22,15 @@ View for about page.
 #        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-def page(request):
+def page(request, pk):
+
+
     return render(
         request,
-        'public/about.html',
+        'public/details.html',
         {
             "journal": "active",
-            "BASE_HREF": settings.BASE_HREF
+            "BASE_HREF": settings.BASE_HREF,
+            "journal_id": pk
         }
     )

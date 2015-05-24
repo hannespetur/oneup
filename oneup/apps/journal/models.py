@@ -10,7 +10,7 @@ class Journal(models.Model):
 
     def was_posted_recently(self):
         now = timezone.now()
-        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+        return now - datetime.timedelta(days=1) <= self.posted_date <= now
 
     def __unicode__(self):
         return self.title
