@@ -22,8 +22,9 @@ View for about page.
 #        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-def page(request, pk):
-
+def page(request, journal_id, slug=None):
+    if slug in ['', None]:
+        slug = 'Slug was empty'
 
     return render(
         request,
@@ -31,6 +32,7 @@ def page(request, pk):
         {
             "journal": "active",
             "BASE_HREF": settings.BASE_HREF,
-            "journal_id": pk
+            "journal_id": journal_id,
+            'slug': slug
         }
     )

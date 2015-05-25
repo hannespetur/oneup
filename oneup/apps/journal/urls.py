@@ -7,5 +7,5 @@ urlpatterns = [
     # ex: /journal/
     url(r'^$', index.page, name='index'),
     # ex: /journal/5/
-    url(r'^(?P<pk>[0-9]+)/$', details.page, name='details'),
+    url(r'^(?P<journal_id>[0-9]+)(?:\/(?P<slug>.*)?)?$', details.page, name='details'),
 ]
