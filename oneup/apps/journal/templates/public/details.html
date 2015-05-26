@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title_html %}
-  {{ bloc.super }}About Team 1up
+  {{ bloc.super }}{{ title }}
 {% endblock %}
 {% block h1 %}
-  This is journal with id {{ journal_id }} and slug {{slug}}
+  {{ title }} <small>{{ posted_date }}</small>
 {% endblock %}
 {% block article_content %}
-  Team members are: ...
-  <br /> <br />
-  <a href="{% url 'public_index' %}">Back to frontpage</a>
+  {{ body }}
 {% endblock %}

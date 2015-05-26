@@ -3,6 +3,8 @@ import datetime
 from django.db import models
 from django.db.models import permalink
 from django.utils import timezone
+from django.conf import settings
+from django.core.urlresolvers import reverse
 
 
 class Journal(models.Model):
@@ -26,9 +28,10 @@ class Journal(models.Model):
 
     # see doc for get_absolute_url:
     # https://docs.djangoproject.com/en/1.8/ref/models/instances/#get-absolute-url
-    @permalink
-    def get_absolute_url(self):
-        return '/journals/%s/%s' % (self.id, self.slug)
+    #@permalink
+    #def get_absolute_url(self):
+    #    #return '%sjournal/%s/%s' % (settings.BASE_HREF, self.id, self.slug)
+    #    return reverse('journal:details', kwargs={'journal_id': str(self.id), 'slug': self.slug})
 
 class Category(models.Model):
     class Meta:
@@ -43,6 +46,5 @@ class Category(models.Model):
 
     # see doc for get_absolute_url:
     # https://docs.djangoproject.com/en/1.8/ref/models/instances/#get-absolute-url
-    @permalink
-    def get_absolute_url(self):
-        return '/journals-by-category/%s' % self.slug
+    #def get_absolute_url(self):
+    #    return '/journals-by-category/%s' % self.slug

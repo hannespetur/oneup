@@ -78,4 +78,4 @@ oneup/apps/test/migrations/
 .idea/
 
 # Migration files
-oneup/apps/*/migrations/0001_initial.py
+oneup/apps/*/migrations/*

@@ -5,9 +5,11 @@ from django.conf import settings
 # from oneup.apps.journal.models import Question, Choice
 # from django.utils import timezone
 
-"""
-View for index page.
-"""
+from oneup.apps.journal.models import Journal
+
+'''
+View for journal index.
+'''
 
 
 # class IndexView(generic.ListView):
@@ -21,24 +23,13 @@ View for index page.
 #             ).order_by('-pub_date')[:5]
 
 def page(request):
-    team_name = "Team 1up"
-    years_old = 15
-    list_of_games = [
-        "Counter Strike",
-        "Dark Souls",
-        "Dota 2",
-        "Hearthstone",
-        "Starcraft",
-        "That mobile app game that ripped off Dota 2 heroes"
-    ]
+    last_five_visible_journals = Journal.objects.filter(visible=1).order_by('-id')[:5]
+    #from pdb import set_trace; set_trace()
     return render(
         request,
         'public/index.html',
         {
-            "team": team_name,
-            "years": years_old,
-            "journal": "active",
-            "games_array": list_of_games,
-            "BASE_HREF": settings.BASE_HREF
+            'BASE_HREF': settings.BASE_HREF,
+            'journals': last_five_visible_journals
         }
     )

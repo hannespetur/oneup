@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block title_html %}
-  {{ bloc.super }}Home
+  {{ bloc.super }}Journals
 {% endblock %}
 {% block h1 %}
   Here will the journal be!
 {% endblock %}
 {% block article_content %}
+  {% for journal in journals %}
+    <h2>{{ journal.title }} <small>{{ journal.posted_date }}</small></h2>
+    <p class="lead">{{ journal.body }}</p>
+  {% endfor %}
 {% endblock %}
